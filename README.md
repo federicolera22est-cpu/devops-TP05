@@ -11,12 +11,12 @@ API Python con framework Flask corriendo en Docker, con buenas prácticas de pro
 | `GET /` | Status de la app |
 | `GET /health` | Uptime, hostname, entorno |
 | `GET /info` | Versión y metadata |
- 
+
 ## Correr localmente
- 
 Ejecutar en bash
 docker run -d -p 8080:5000 TU_USUARIO/devops-portfolio:latest
 curl http://localhost:8080/health
+
 ##Buenas prácticas aplicadas
 
 python:3.12-slim en lugar de python:3.12 (imagen 6x más liviana)
