@@ -19,11 +19,22 @@ curl http://localhost:8080/health
 
 ## Buenas prácticas aplicadas
 
-python:3.12-slim en lugar de python:3.12 (imagen 6x más liviana)
-COPY requirements.txt antes del código (caché de capas)
---no-cache-dir en pip (imagen más liviana)
-Usuario no-root (appuser) por seguridad
-gunicorn en lugar de flask run (servidor de producción)
-Variables de entorno para configuración dinámica
+- Uso de `python:3.12-slim` en lugar de `python:3.12`
+  - Imagen aproximadamente 6 veces más liviana.
+
+- `COPY requirements.txt` antes del código fuente
+  - Optimización de caché de capas en Docker.
+
+- Uso de `pip install --no-cache-dir`
+  - Reduce el tamaño final de la imagen.
+
+- Implementación de usuario no-root (`appuser`)
+  - Mejora la seguridad del contenedor.
+
+- Uso de `gunicorn` en lugar de `flask run`
+  - Servidor preparado para producción.
+
+- Variables de entorno para configuración dinámica
+  - Facilita despliegues en distintos entornos.
 ## Imagen en Docker Hub
 docker pull TU_USUARIO/devops-portfolio:latest
