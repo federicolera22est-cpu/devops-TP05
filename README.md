@@ -25,5 +25,5 @@ COPY requirements.txt antes del código (caché de capas)
 Usuario no-root (appuser) por seguridad
 gunicorn en lugar de flask run (servidor de producción)
 Variables de entorno para configuración dinámica
-Imagen en Docker Hub
+## Imagen en Docker Hub
 docker pull TU_USUARIO/devops-portfolio:latest
